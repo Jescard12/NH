@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأقسام والخدمات | Services — Dr. Nasser Abou Hamdan Medical Center</title>
+<link rel="icon" href="assets/logo.jpeg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="services">
+
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-links">
+      <a href="tel:+96181897091">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.22a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+        <span>81 897 091</span>
+      </a>
+      <a href="contact.html" data-ar="السمقانية، الطريق العام، الشوف" data-en="Samqaniyeh, Main Road, Chouf">السمقانية، الطريق العام، الشوف</a>
+    </div>
+    <div class="lang-toggle">
+      <button data-lang="ar">عربي</button>
+      <button data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<nav class="mainnav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.jpeg" alt="logo">
+      <span class="brand-text" data-ar="د. ناصر أبو حمدان" data-en="Dr. Nasser Abou Hamdan">د. ناصر أبو حمدان
+        <span data-ar="مركز طبي تخصصي" data-en="Specialized Medical Center">مركز طبي تخصصي</span>
+      </span>
+    </a>
+    <div class="navlinks">
+      <a href="index.html" data-page="home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="about.html" data-page="about" data-ar="عن المركز" data-en="About">عن المركز</a>
+      <a href="services.html" data-page="services" data-ar="الأقسام والخدمات" data-en="Services">الأقسام والخدمات</a>
+      <a href="contact.html" data-page="contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-primary btn-sm" id="navWaBtn" target="_blank" rel="noopener">
+        <span data-ar="احجز موعد" data-en="Book Now">احجز موعد</span>
+      </a>
+      <button class="burger" aria-label="menu"><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-drawer">
+  <div class="panel">
+    <button class="close-x">✕</button>
+    <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+    <a href="about.html" data-ar="عن المركز" data-en="About">عن المركز</a>
+    <a href="services.html" data-ar="الأقسام والخدمات" data-en="Services">الأقسام والخدمات</a>
+    <a href="contact.html" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
+    <a class="btn btn-primary btn-sm" id="navWaBtnMobile" target="_blank" rel="noopener" data-ar="احجز عبر واتساب" data-en="Book on WhatsApp">احجز عبر واتساب</a>
+  </div>
+</div>
+
+<header class="hero" style="padding-bottom:10px;">
+  <div class="container" style="grid-template-columns:1fr;text-align:center;">
+    <div class="section-head center" style="margin-bottom:0;">
+      <div class="eyebrow"><span class="dot"></span><span data-ar="الأقسام والخدمات" data-en="Departments & Services">الأقسام والخدمات</span></div>
+      <h1 style="font-size:clamp(1.9rem,3.4vw,2.6rem);" data-ar="كل خدماتنا الطبية والعلاجية" data-en="All our medical and therapeutic services">كل خدماتنا الطبية والعلاجية</h1>
+      <p data-ar="اختر القسم الذي يهمّك، ثم اضغط على أيقونة واتساب لحجز موعدك لتلك الخدمة مباشرة." data-en="Choose the department you need, then tap the WhatsApp icon to book that exact service directly.">اختر القسم لحجز موعدك.</p>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:20px;">
+  <div class="container">
+    <div class="tabs" id="tabBar"></div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2 data-ar="لم تجد الخدمة التي تبحث عنها؟" data-en="Didn't find what you're looking for?">لم تجد الخدمة التي تبحث عنها؟</h2>
+        <p data-ar="تواصل معنا مباشرة وسنوجّهك للقسم المناسب." data-en="Reach out directly and we'll point you to the right department.">تواصل معنا مباشرة.</p>
+      </div>
+      <a class="btn btn-primary" id="ctaWaBtn" target="_blank" rel="noopener">
+        <span data-ar="تواصل عبر واتساب" data-en="Message us on WhatsApp">تواصل عبر واتساب</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:0;margin-top:0;">
+      <span data-ar="© 2026 مركز الدكتور ناصر أبو حمدان الطبي التخصصي. جميع الحقوق محفوظة." data-en="© 2026 Dr. Nasser Abou Hamdan Specialized Medical Center. All rights reserved.">© 2026 جميع الحقوق محفوظة</span>
+      <a href="index.html" data-ar="العودة للرئيسية" data-en="Back to home">العودة للرئيسية</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" id="floatWaBtn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.4-.1-.6.1-.2.3-.7 1-.8 1.1-.2.2-.3.2-.5.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8z"/></svg>
+</a>
+
+<script src="assets/data.js"></script>
+<script src="assets/script.js"></script>
+<script>
+  let activeKey = (location.hash || "").replace("#","") || DEPARTMENTS[0].key;
+
+  function render(){
+    const lang = getLang();
+    const tabBar = document.getElementById("tabBar");
+    tabBar.innerHTML = DEPARTMENTS.map(d => `
+      <button class="tab-btn ${d.key===activeKey?'active':''}" data-key="${d.key}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d.icon}</svg>
+        ${d.name[lang]}
+      </button>`).join("");
+
+    const panels = document.getElementById("panels");
+    panels.innerHTML = DEPARTMENTS.map(d => `
+      <div class="tab-panel ${d.key===activeKey?'active':''}" id="panel-${d.key}">
+        <div class="dept-panel-head">
+          <div class="dept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d.icon}</svg></div>
+          <div><h2>${d.name[lang]}</h2></div>
+        </div>
+        <p class="dept-panel-desc">${d.desc[lang]}</p>
+        <div class="service-grid">
+          ${d.services.map(s => `
+            <div class="service-card">
+              <span>${s[lang]}</span>
+              <a class="book-mini" target="_blank" rel="noopener" href="${waLink(s.ar, s.en)}" aria-label="Book">
+                <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.4-.1-.6.1-.2.3-.7 1-.8 1.1-.2.2-.3.2-.5.1-.3-.1-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8z"/></svg>
+              </a>
+            </div>`).join("")}
+        </div>
+      </div>`).join("");
+
+    document.querySelectorAll(".tab-btn").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        activeKey = btn.dataset.key;
+        history.replaceState(null,"","#"+activeKey);
+        document.querySelectorAll(".tab-btn").forEach(b=>b.classList.toggle("active", b.dataset.key===activeKey));
+        document.querySelectorAll(".tab-panel").forEach(p=>p.classList.toggle("active", p.id === "panel-"+activeKey));
+      });
+    });
+  }
+
+  function wireWhatsApp(){
+    document.getElementById("navWaBtn").href = waGeneral();
+    document.getElementById("navWaBtnMobile").href = waGeneral();
+    document.getElementById("ctaWaBtn").href = waGeneral();
+    document.getElementById("floatWaBtn").href = waGeneral();
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{ render(); wireWhatsApp(); });
+  document.body.addEventListener("langchange", ()=>{ render(); wireWhatsApp(); });
+</script>
+</body>
+</html>
