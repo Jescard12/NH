@@ -3,7 +3,7 @@
    ========================================================= */
 
    function getLang(){
-    return localStorage.getItem("dnh-lang") || "ar";
+    return localStorage.getItem("dnh-lang") || "en";
   }
   
   function applyLang(lang){

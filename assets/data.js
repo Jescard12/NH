@@ -17,11 +17,11 @@
    
    const HOURS = [
      { day: {ar:"الاثنين", en:"Monday"}, time: {ar:"09:00 – 17:00", en:"9 AM – 5 PM"}, today: 1 },
-     { day: {ar:"الثلاثاء", en:"Tuesday"}, time: {ar:"09:00 – 17:00", en:"09:00 AM – 5 PM"}, today: 2 },
-     { day: {ar:"الأربعاء", en:"Wednesday"}, time: {ar:"09:00 – 17:00", en:"09:00 AM – 5 PM"}, today: 3 },
-     { day: {ar:"الخميس", en:"Thursday"}, time: {ar:"09:00 – 17:00", en:"09:00 AM – 5 PM"}, today: 4 },
-     { day: {ar:"الجمعة", en:"Friday"}, time: {ar:"09:00 – 17:00", en:"09:00 AM – 5 PM"}, today: 5 },
-     { day: {ar:"السبت", en:"Saturday"}, time: {ar:"09:00 – 15:00", en:"09:00 AM – 3 PM"}, today: 6 },
+     { day: {ar:"الثلاثاء", en:"Tuesday"}, time: {ar:"09:00 – 17:00", en:"9 AM – 5 PM"}, today: 2 },
+     { day: {ar:"الأربعاء", en:"Wednesday"}, time: {ar:"09:00 – 17:00", en:"9 AM – 5 PM"}, today: 3 },
+     { day: {ar:"الخميس", en:"Thursday"}, time: {ar:"09:00 – 17:00", en:"9 AM – 5 PM"}, today: 4 },
+     { day: {ar:"الجمعة", en:"Friday"}, time: {ar:"09:00 – 17:00", en:"9 AM – 5 PM"}, today: 5 },
+     { day: {ar:"السبت", en:"Saturday"}, time: {ar:"09:00 – 15:00", en:"9 AM – 3 PM"}, today: 6 },
      { day: {ar:"الأحد", en:"Sunday"}, time: {ar:"مغلق", en:"Closed"}, today: 0 },
    ];
    
@@ -30,6 +30,52 @@
      const h = HOURS.find(x=>x.today===nowDay);
      return h ? `${h.day[lang]} ${h.time[lang]}` : "";
    }
+   
+   /* ---- real team members ---- */
+   const TEAM = [
+     { photo:"assets/team/nasser_pediatrician.jpg", dept:"medical",
+       name:{ar:"د. ناصر أبو حمدان", en:"Dr. Nasser Abou Hamdan"},
+       role:{ar:"طب الأطفال وحديثي الولادة", en:"Pediatrician & Neonatology"} },
+     { photo:"assets/team/ghotmi_obgyn.jpg", dept:"medical",
+       name:{ar:"د. محمد جميل غطمي", en:"Dr. Mohammad Jamil Ghotmi"},
+       role:{ar:"أمراض نسائية وتوليد وزراعة أطفال الأنابيب", en:"Obstetrics, Gynecology & IVF"} },
+     { photo:"assets/team/milhim_ortho.jpg", dept:"medical",
+       name:{ar:"د. روني ملحم", en:"Dr. Roni Milhim"},
+       role:{ar:"جراحة العظام", en:"Orthopedic Surgery"} },
+     { photo:"assets/team/halim_maxillofacial.jpg", dept:"medical",
+       name:{ar:"د. حليم عموري", en:"Dr. Halim Ammouri"},
+       role:{ar:"جراحة الفم والوجه والفكين والتجميل", en:"Maxillofacial & Plastic Surgery"} },
+     { photo:"assets/team/heba_nutrition.jpg", dept:"medical",
+       name:{ar:"هبا أبي فرج", en:"Heba Abi Faraj, RD"},
+       role:{ar:"أخصائية تغذية علاجية", en:"Clinical Nutritionist"} },
+     { photo:"assets/team/cesar_orthodontist.jpg", dept:"dental",
+       name:{ar:"د. سيزار حلاواني", en:"Dr. Cesar Halawani"},
+       role:{ar:"تقويم الأسنان", en:"Orthodontist"} },
+     { photo:"assets/team/beddou_psychiatrist.jpg", dept:"psychologist",
+       name:{ar:"د. وسيلة بدّو", en:"Dr. Wasila Beddou"},
+       role:{ar:"الطب النفسي (إدمان، وسواس قهري، اضطرابات نوم، اكتئاب)", en:"Psychiatry (addiction, OCD, sleep, depression)"} },
+     { photo:"assets/team/nesrin_psych.jpg", dept:"psychologist",
+       name:{ar:"نسرين عبد الصمد", en:"Nesrin Abdelsamad"},
+       role:{ar:"أخصائية نفسية إكلينيكية", en:"Clinical Psychologist"} },
+     { photo:"assets/team/safia_psych.jpg", dept:"psychologist",
+       name:{ar:"صافيا أبو حمدان", en:"Safia Bou Hamdan"},
+       role:{ar:"أخصائية نفسية", en:"Psychologist"} },
+     { photo:"assets/team/nagham_physio.jpg", dept:"physio",
+       name:{ar:"نغم زيدان", en:"Nagham Zaidan"},
+       role:{ar:"أخصائية علاج فيزيائي", en:"Physiotherapist"} },
+     { photo:"assets/team/lodi_speech.jpg", dept:"speech",
+       name:{ar:"لودي ذبيان", en:"Lodi Thebian"},
+       role:{ar:"أخصائية نطق ولغة", en:"Speech & Language Therapist"} },
+     { photo:"assets/team/tamara_ot.jpg", dept:"occupational",
+       name:{ar:"تمارا بو كروم", en:"Tamara Bou Karroum"},
+       role:{ar:"أخصائية علاج وظيفي", en:"Occupational Therapist"} },
+     { photo:"assets/team/caroline_ot.jpg", dept:"occupational",
+       name:{ar:"كارولين بو حيدر", en:"Caroline Bou Hadir"},
+       role:{ar:"أخصائية علاج وظيفي", en:"Occupational Therapist"} },
+     { photo:"assets/team/hazar_ecd.jpg", dept:"occupational",
+       name:{ar:"هزار الخطار", en:"Hazar Khattar"},
+       role:{ar:"تطور الطفولة المبكرة وتعديل السلوك", en:"Early Childhood Development & ABA Specialist"} },
+   ];
    
    function waLink(textAr, textEn){
      const lang = getLang();
