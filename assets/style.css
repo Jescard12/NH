@@ -3,7 +3,6 @@
    Design tokens derived from the center's heart/pulse logo
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap');
 
 :root{
   --green-1:#2fbf6e;
@@ -53,13 +52,13 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family:'Tajawal',sans-serif;
+  font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans Arabic',Arial,sans-serif;
   font-weight:400;
   line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
 h1,h2,h3,h4,.display{
-  font-family:'Cairo',sans-serif;
+  font-family:'Cairo',system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans Arabic',Arial,sans-serif;
   font-weight:800;
   color:var(--blue-2);
   line-height:1.25;
@@ -118,13 +117,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 
 nav.mainnav{
   position:sticky;top:0;z-index:100;
-  background:rgba(245,250,249,.88);
-  backdrop-filter:blur(10px);
+  background:#fbfffc;
   border-bottom:1px solid var(--line);
 }
 .mainnav .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;gap:18px;}
 .brand{display:flex;align-items:center;gap:10px;}
-.brand img{height:46px;width:auto;}
+.brand img{height:46px;width:auto;max-width:none;}
 .brand-text{font-family:'Cairo',sans-serif;font-weight:800;color:var(--blue-2);font-size:1rem;line-height:1.2;}
 .brand-text span{display:block;font-family:'Tajawal',sans-serif;font-weight:500;color:var(--muted);font-size:.72rem;}
 .navlinks{display:flex;align-items:center;gap:28px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.92rem;}
@@ -230,9 +228,9 @@ section{padding:76px 0;}
 .about-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;}
 .about-photo{
   border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);
-  aspect-ratio:4/5;background:var(--grad-brand);display:flex;align-items:center;justify-content:center;
+  aspect-ratio:4/5;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
 }
-.about-photo img{width:100%;height:100%;object-fit:cover;}
+.about-photo img{width:80%;height:auto;object-fit:contain;}
 .stat-row{display:flex;gap:30px;margin-top:24px;flex-wrap:wrap;}
 .stat-row div b{font-family:'Cairo',sans-serif;font-size:1.6rem;color:var(--green-1);display:block;}
 .stat-row div span{font-size:.82rem;color:var(--muted);}
@@ -259,7 +257,7 @@ footer{background:var(--blue-2);color:rgba(255,255,255,.85);padding:60px 0 20px;
 .footer-grid ul li{margin-bottom:10px;font-size:.88rem;}
 .footer-grid ul li a:hover{color:#fff;text-decoration:underline;}
 .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-.footer-brand img{height:44px;width:44px;object-fit:cover;border-radius:10px;background:#fff;padding:3px;}
+.footer-brand img{height:46px;width:auto;border-radius:10px;background:#fff;padding:5px 8px;}
 .footer-brand b{font-family:'Cairo',sans-serif;color:#fff;font-size:1rem;}
 .footer-social{display:flex;gap:10px;margin-top:16px;}
 .footer-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;}
@@ -369,6 +367,12 @@ footer{background:var(--blue-2);color:rgba(255,255,255,.85);padding:60px 0 20px;
 .g-item.placeholder.alt2{background:linear-gradient(120deg,var(--green-2),var(--green-1));}
 
 
+/* split layouts (were inline styles, which beat the mobile rules) */
+.hours-split{grid-template-columns:1.1fr .9fr;align-items:center;}
+.team-split{grid-template-columns:1fr 1fr;}
+body{overflow-x:hidden;}
+img{height:auto;}
+
 @media (max-width:960px){
   .navlinks{display:none;}
   .burger{display:flex;}
@@ -404,3 +408,39 @@ footer{background:var(--blue-2);color:rgba(255,255,255,.85);padding:60px 0 20px;
 }
 .mobile-drawer a{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink);}
 .mobile-drawer .close-x{align-self:flex-end;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;}
+
+/* ===== phone / low-end Android improvements ===== */
+@media (max-width:960px){
+  .hero-visual{order:0;}
+  .hero::before,.hero::after{display:none;}
+  .hero{padding-top:36px;}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab-btn{flex-shrink:0;}
+  section{padding:52px 0;}
+}
+@media (max-width:640px){
+  .container{padding:0 16px;}
+  .topbar-links a:not(:first-child){display:none;}
+  .brand img{height:38px;}
+  .brand-text{font-size:.9rem;}
+  .brand-text span{font-size:.66rem;}
+  .hero h1{font-size:1.85rem;}
+  .hero-visual{padding:18px;}
+  .hero-badge{inset-inline-start:14px;}
+  .hero-stats{gap:20px;}
+  .infostrip .container{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .team-info{padding:12px 12px 16px;}
+  .team-info h3{font-size:.92rem;}
+  .team-role-tag{font-size:.64rem;padding:4px 9px;max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .service-card{padding:13px 14px;}
+  .contact-card{padding:20px;}
+  .cta-band h2{font-size:1.35rem;}
+  .map-embed iframe{height:300px;}
+  .wa-float{width:54px;height:54px;bottom:16px;inset-inline-end:16px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;}
+  .pulse-path{stroke-dashoffset:0;}
+  .pulse-divider path{stroke-dashoffset:0;}
+}

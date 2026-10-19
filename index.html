@@ -6,7 +6,10 @@
 <script>(function(){try{var l=localStorage.getItem("dnh-lang")||"en";document.documentElement.lang=l;document.documentElement.dir=(l==="ar"?"rtl":"ltr");}catch(e){}})();</script>
 <title>مركز الدكتور ناصر أبو حمدان الطبي التخصصي | Dr. Nasser Abou Hamdan Medical Center</title>
 <meta name="description" content="مركز طبي شامل في السمقانية، الشوف يضم طب الأطفال، النساء والتوليد، العظام، العيون، الأسنان، النطق، العلاج الفيزيائي والوظيفي، والطب النفسي.">
-<link rel="icon" href="assets/logo.jpeg">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-page="home">
@@ -31,11 +34,9 @@
 <nav class="mainnav">
   <div class="container">
     <a href="index.html" class="brand">
-      <img src="assets/logo.jpeg" alt="Dr. Nasser Abou Hamdan Medical Center logo">
-      <span class="brand-text" data-ar="مركز د. ناصر أبو حمدان الطبي" data-en="Dr. Nasser Abou Hamdan Medical Center">
-  Dr. Nasser Abou Hamdan
-  <span data-ar="مركز طبي تخصصي" data-en="Specialized Medical Center">Specialized Medical Center</span>
-</span>
+      <img src="assets/logo.png" alt="Dr. Nasser Abou Hamdan Medical Center logo" width="420" height="278">
+      <span class="brand-text" data-ar="د. ناصر أبو حمدان" data-en="Dr. Nasser Abou Hamdan">Dr. Nasser Abou Hamdan<span data-ar="مركز طبي تخصصي" data-en="Specialized Medical Center">Specialized Medical Center</span>
+      </span>
     </a>
     <div class="navlinks">
       <a href="index.html" data-page="home" data-ar="الرئيسية" data-en="Home">Home</a>
@@ -169,7 +170,7 @@
 <section style="padding-top:0;">
   <div class="container">
     <div class="about-split">
-      <div class="about-photo"><img src="assets/team/nasser_pediatrician.jpg" alt="Dr. Nasser Abou Hamdan Medical Center"></div>
+      <div class="about-photo"><img src="assets/logo.png" alt="Dr. Nasser Abou Hamdan Medical Center" width="420" height="278"></div>
       <div>
         <div class="eyebrow"><span class="dot"></span><span data-ar="من نحن" data-en="Who We Are">Who We Are</span></div>
         <h2 data-ar="مركز طبي بُني حول احتياجات المريض" data-en="A medical center built around the patient">A medical center built around the patient</h2>
@@ -226,7 +227,7 @@
 <!-- ============ WORKING HOURS ============ -->
 <section style="padding-top:0;">
   <div class="container">
-    <div class="contact-grid" style="grid-template-columns:1.1fr .9fr;align-items:center;">
+    <div class="contact-grid hours-split">
       <div>
         <div class="eyebrow"><span class="dot"></span><span data-ar="مواعيد الدوام" data-en="Working Hours">Working Hours</span></div>
         <h2 data-ar="نستقبلكم على مدار الأسبوع" data-en="We welcome you throughout the week">We welcome you throughout the week</h2>
@@ -262,7 +263,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand"><img src="assets/logo.jpeg" alt="logo"><b data-ar="مركز د. ناصر أبو حمدان الطبي" data-en="Dr. Nasser Abou Hamdan Medical Center">Dr. Nasser Abou Hamdan Medical Center</b></div>
+        <div class="footer-brand"><img src="assets/logo.png" alt="logo" width="420" height="278"><b data-ar="د. ناصر أبو حمدان" data-en="Dr. Nasser Abou Hamdan">Dr. Nasser Abou Hamdan</b></div>
         <p data-ar="مركز طبي تخصصي يقدّم رعاية شاملة لجميع أفراد العائلة في السمقانية، الشوف." data-en="A specialized medical center providing comprehensive care for the whole family in Samqaniyeh, Chouf.">A specialized medical center providing comprehensive care for the whole family in Samqaniyeh, Chouf.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/dnhmedicalcenter/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
@@ -350,7 +351,7 @@
     grid.innerHTML = featured.map(t => `
       <div class="team-card">
         <div class="team-photo">
-          <img src="${t.photo}" alt="${t.name[lang]}" loading="lazy">
+          <img src="${t.photo}" alt="${t.name[lang]}" loading="lazy" decoding="async">
           <span class="team-role-tag">${t.role[lang].length > 34 ? t.role[lang].slice(0,32)+'…' : t.role[lang]}</span>
         </div>
         <div class="team-info">
